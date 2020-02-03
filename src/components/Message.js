@@ -21,15 +21,3 @@ class Message extends React.Component {
 }
 
 export default Message
-
-
-
-
-
-
-
-// const Message = ({ message }) => (
-// 	<p className="user-message">
-// 		{message}
-// 	</p>
-// )
