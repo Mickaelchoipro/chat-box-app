@@ -4,18 +4,32 @@ class Message extends React.Component {
 
 	render () {
 
-		return (
-			<p className='user-message'>
-				{this.props.message}
-			</p>  
-		)
+		if (this.props.pseudo === this.props.currentPseudo) {
+      return (
+        <p className='user-message'>
+				  {this.props.message}
+			  </p>
+      )
+	  } else {
+      return (
+        <p className='not-user-message'>
+				  <strong>{this.props.pseudo} : </strong>{this.props.message}
+			  </p>
+      )
+    }
 	}
 }
+
+export default Message
+
+
+
+
+
+
 
 // const Message = ({ message }) => (
 // 	<p className="user-message">
 // 		{message}
 // 	</p>
 // )
-
-export default Message
